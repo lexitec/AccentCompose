@@ -23,7 +23,7 @@ Most accents can be input from the unshifted level (exceptions are macrons and s
 In the USKBD.EU version, the keys `/~, ;/: and '/" are reserved for localized additions (e.g. German ü/ä/ö). They appear “as is” in the GitHub US and US localized versions. Note that these characters are not used for typing accents in any AccentCompose version (as is the case in standard Linux .XCompose implementations).
 
 As the Compose approach is entirely sequential (Compose key followed by 2 or 3 keypresses), there is no need for acrobatic keypresses that the dead key approach sometimes requires (e.g. AltGr+Shift+letter). The Compose method is chosen as a technically superior input method.
-___
+
 *) In the USKBD.EU version.
 
 # Localized versions
