@@ -23,8 +23,7 @@ Most accents can be input from the unshifted level (exceptions are macrons and s
 In the USKBD.EU version, the keys `/~, ;/: and '/" are reserved for localized additions (e.g. German ü/ä/ö). They appear “as is” in the GitHub US and US localized versions. Note that these characters are not used for typing accents in any AccentCompose version (as is the case in standard Linux .XCompose implementations).
 
 As the Compose approach is entirely sequential (Compose key followed by 2 or 3 keypresses), there is no need for acrobatic keypresses that the dead key approach sometimes requires (e.g. AltGr+Shift+letter). The Compose method is chosen as a technically superior input method.
-
----
+___
 *) In the USKBD.EU version.
 
 # Localized versions
@@ -44,5 +43,5 @@ Download AccentCompose localized versions setup program from https://www.uskbd.e
 These are the keys that should work in any case: LeftWin, RightWin, Menu, and RightCtrl. LeftWin is recommended for typing accented letters. It is not advisable to use LeftAlt or LeftCtrl or CapsLock as the Compose key. As WinCompose allows you to define two Compose keys, it is good practise to do so. 
 To select the Compose keys in WinCompose, open Options, Composing, Behavior, Compose Key...
 
-# Editing .Xcompose and managing MS-Word
-The supplied .XCompose has probably all you ever need but it can be freely edited if you choose to do so. You can add new key sequences for unsupported special characters. Read the editing tips in the .XCompose file. Some AccentCompose key assignments may conflict with default MS Word key shortcut macros stored in normal.dotm. Instructions on how to resolve these conflicts are in the file ‘Note on Word key sequences.txt’ in the SRC folder.
+# Editing .Xcompose
+The supplied .XCompose has probably all you ever need but it can be freely edited if you choose to do so. You can add new key sequences for unsupported special characters. Check that your new key sequences do not conflict with key sequences already in use. Read the editing tips in the .XCompose file.
