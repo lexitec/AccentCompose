@@ -1,0 +1,881 @@
+# for Emacs: -*- coding: utf-8 -*-
+
+# User-defined .XCompose key sequences for use with a US (ANSI) keyboard and/or AccentCompose
+# Copyright © 2025 Kari Eveli and Lexitec.
+# These sequences can be used with a standard US keyboard in any OS that supports .XCompose files
+# or with the AccentCompose system, i.e. a unified US keyboard hardware-based European multi-layout, 
+# keyboard driver and Compose key system (download free setup program from https://www.uskbd.eu/).
+# All AccentCompose national layouts (and their DLLS) are supported by this .XCompose file.
+
+# WinCompose is the preferred .XCompose engine for running AccentCompose or just this .XCompose file 
+# under Windows (download from https://github.com/samhocevar/wincompose). 
+
+# To configure WinCompose for use with this .XCompose file or AccentCompose, go to WinCompose options, 
+# Composing tab, and deselect all default sequences (untick Use Xorg, XCompose and emoji sequences). 
+# Only custom sequences are now used. Reload WinCompose (Show sequences, Reload button).
+
+# When using the AccentCompose system setup program AC_setup.exe, please note that
+# the active custom editable .XCompose file is in your %USERPROFILE% folder.
+# It replaces the default WinCompose .XCompose file which is automatically
+# backed up whenever the AC_setup.exe installer is run.
+# The .XCompose file in the AccentCompose folder is a read-only default version for reference and
+# backup purposes only.
+
+# To view the active Compose sequences in WinCompose, go to Show sequences, Open Unicode characters.
+# To locate characters, use the Find field in Show sequences, e.g. "dagger", "sigma", "acute", etc.
+# To view all Cyrillic, Greek, etc., characters, open the corresponding Unicode character group
+
+# If you do not see the character descriptions that are in this file as comments after the # sign
+# under Show sequences, select Options, General, Behavior, Interface language: English.
+# Do not use Autodetect. Optionally, delete or rename the locale folder in C:\Program Files\WinCompose
+# that corresponds to your locale and restart WinCompose, then WinCompose defaults to English.
+
+# To edit the active custom .XCompose file in WinCompose, press the Edit button at bottom left.
+# Use a text editor that supports Unicode and loading a font, e.g. EditPad Pro or Lite.
+# Associate your chosen editor in Windows, e.g. in EditPad.
+# In EditPad, go to Convert, Text Encoding, select Unicode, UTF-8, and press Change Font, and select 
+# a monospaced font that shows the whole Latin-based Unicode range of characters, e.g. Everson Mono 
+# (https://www.evertype.com/emono/).
+# After editing .XCompose, press Reload button in WinCompose Show sequences.
+
+# Numeric row triggers (used after <Multi_key> to input different key sequence groups):
+# 1 = standalone accents
+# 2 = Cyrillic
+# 3 = diaeresis, umlaut, trema (plain US keyboard without localization)
+# 4 = currencies
+# 5 = RESERVED
+# 6 = circumflex (plain US keyboard without localization)
+# 7 = IPA (phonetics)
+# 8 = Greek
+# 9 = RESERVED
+# 0 = RESERVED
+# N.B. Shift+9 and Shift+0 are used to mark off enclosed alphanumerics, ( is the trigger: 
+# ( = enclosed alphanumerics
+#
+# N.B. When CapsLock is on, you can type capitalized Cyrillic and Greek by pressing the numeric trigger key 
+# and corresponding letter key because the numeric triggers are not affected by CapsLock (CapsLock+1 = 1).
+
+# Key sequences have the following form:
+# <Multi_key> <1> <accent_key>… :       "output"        # Standalone accents
+# <Multi_key> <2> <key>… :              "output"        # Cyrillic
+# <Multi_key> <3> <key>… :              "output"        # diaeresis, umlaut, trema (US standard keyboard without localization)
+# <Multi_key> <4> <key>… :              "output"        # Currencies
+# <Multi_key> <6> <key>… :              "output"        # circumflex (US standard keyboard without localization)
+# <Multi_key> <7> <key>… :              "output"        # IPA (phonetic transcription)
+# <Multi_key> <8> <key>… :              "output"        # Greek
+# <Multi_key> <(> <key>… <)> :          "output"        # Enclosed alphanumerics
+# <Multi_key> <s> <key>… :              "output"        # Superscript (<s> may appear also on basic plane; no conflicts)
+# <Multi_key> <u> <key>… :              "output"        # Subscript (<u> may appear also on basic plane; no conflicts)
+# <Multi_key> <key> <key>… :            "output"        # ligatures, punctuation, symbols, logic and math
+#
+# N.B. <Multi_key> <n> where n is a number can appear also in fractions; no conflicts
+# All key names must be enclosed in <angle brackets>.
+# The first key must be <Multi_key>.
+# The remaining keys can be single characters, like <a>, <B>, <7>,
+# <.>, <@>, or from the following list:
+#
+#     Up, Down, Left, Right (the arrow keys), space, exclam, quotedbl,
+#     numbersign, dollar, percent, ampersand, apostrophe, parenleft,
+#     parenright, asterisk, plus, comma, minus, period, slash, colon,
+#     semicolon, less, equal, greater, at, bracketleft, backslash,
+#     bracketright, asciicircum, underscore, grave, braceleft, bar,
+#     braceright, asciitilde.
+
+# Accents precede the letter and are coded as follows:
+#
+# / acute
+# \ grave
+# ^ circumflex (or 6 in the US standard keyboard without localization)
+# v caron
+# - tilde
+# u breve
+# _ macron
+# , cedilla; comma accent
+# c ogonek
+# + stroke or slash
+# . dot above (Turkish only: change i to dotless ı)
+# o ring above
+# " diaeresis, umlaut, trema (or 3 in the US standard keyboard without localization)
+# = hungarumlaut, double acute
+#
+# These accents are reserved but not implemented:
+# ; horn (best as separate characters in Vietnamese)
+# : dot below
+#
+# N.B. Support is limited to major European national languages (e.g. no support for Sami or Vietnamese languages).
+# Horn and dot below as well as deprecated Afrikaans 'n accents are excluded from this list.
+# S cedilla (Turkish Ş) is default; to get S comma (Romanian Ș) - copy and paste.
+# T comma accent (Romanian Ț) is default; to get T cedilla (Gagauz or Dobrujan Tatar Ţ) - copy and paste.
+# Dutch Ĳ acute is rendered as two letters "ÍJ́"; <Multi_key> </> <Ĳ> works only with the Dutch layout, otherwise use acute I and J separately
+#
+# Important note for MS Word users: Word has conflicting default key sequences that should be deleted
+# if and when they interfere with AccentCompose.
+# Read the attached Note on Word key sequences for detailed instructions.
+#
+
+# UPPERCASE ACCENTED LETTERS
+<Multi_key> </> <A> : "Á"       # A acute
+<Multi_key> <\> <A> : "À"       # A grave
+<Multi_key> <^> <A> : "Â"       # A circumflex
+<Multi_key> <v> <A> : "Ǎ"       # A caron
+<Multi_key> <u> <A> : "Ă"       # A breve
+<Multi_key> <_> <A> : "Ā"       # A macron
+<Multi_key> <-> <A> : "Ã"       # A tilde
+<Multi_key> <c> <A> : "Ą"       # A ogonek
+<Multi_key> </> <C> : "Ć"       # C acute
+<Multi_key> <.> <C> : "Ċ"       # C dot above
+<Multi_key> <^> <C> : "Ĉ"       # C circumflex
+<Multi_key> <v> <C> : "Č"       # C caron
+<Multi_key> <,> <C> : "Ç"       # C cedilla
+<Multi_key> <v> <D> : "Ď"       # D caron
+<Multi_key> <+> <D> : "Đ"       # D with stroke
+<Multi_key> </> <E> : "É"       # E acute
+<Multi_key> <\> <E> : "È"       # E grave
+<Multi_key> <.> <E> : "Ė"       # E dot above
+<Multi_key> <^> <E> : "Ê"       # E circumflex
+<Multi_key> <"> <E> : "Ë"       # E diaeresis
+<Multi_key> <v> <E> : "Ě"       # E caron
+<Multi_key> <u> <E> : "Ĕ"       # E breve
+<Multi_key> <_> <E> : "Ē"       # E macron
+<Multi_key> <c> <E> : "Ę"       # E ogonek
+<Multi_key> <.> <G> : "Ġ"       # G dot above
+<Multi_key> <^> <G> : "Ĝ"       # G circumflex
+<Multi_key> <u> <G> : "Ğ"       # G breve
+<Multi_key> <,> <G> : "Ģ"       # G cedilla
+<Multi_key> </> <G> : "Ģ"       # G acute
+<Multi_key> <^> <H> : "Ĥ"       # H circumflex
+<Multi_key> <+> <H> : "Ħ"       # H with stroke
+<Multi_key> </> <I> : "Í"       # I acute
+<Multi_key> <\> <I> : "Ì"       # I grave
+<Multi_key> <.> <I> : "İ"       # I dot above
+<Multi_key> <^> <I> : "Î"       # I circumflex
+<Multi_key> <"> <I> : "Ï"       # I diaeresis
+<Multi_key> <u> <I> : "Ĭ"       # I breve
+<Multi_key> <_> <I> : "Ī"       # I macron
+<Multi_key> <-> <I> : "Ĩ"       # I tilde
+<Multi_key> <c> <I> : "Į"       # I ogonek
+<Multi_key> </> <Ĳ> : "ÍJ́"      # IJ acute (works only with the Dutch layout)
+<Multi_key> </> <J> : "J́"       # J acute  (J + combining acute accent)
+<Multi_key> <^> <J> : "Ĵ"       # J circumflex
+<Multi_key> <,> <K> : "Ķ"       # K cedilla
+<Multi_key> </> <L> : "Ĺ"       # L acute
+<Multi_key> <.> <L> : "Ŀ"       # L middle dot
+<Multi_key> <v> <L> : "Ľ"       # L caron
+<Multi_key> <,> <L> : "Ļ"       # L cedilla
+<Multi_key> <+> <L> : "Ł"       # L with stroke
+<Multi_key> </> <N> : "Ń"       # N acute
+<Multi_key> <v> <N> : "Ň"       # N caron
+<Multi_key> <-> <N> : "Ñ"       # N tilde
+<Multi_key> <,> <N> : "Ņ"       # N cedilla
+<Multi_key> </> <O> : "Ó"       # O acute
+<Multi_key> <\> <O> : "Ò"       # O grave
+<Multi_key> <^> <O> : "Ô"       # O circumflex
+<Multi_key> <u> <O> : "Ŏ"       # O breve
+<Multi_key> <_> <O> : "Ō"       # O macron
+<Multi_key> <-> <O> : "Õ"       # O tilde
+<Multi_key> </> <R> : "Ŕ"       # R acute
+<Multi_key> <v> <R> : "Ř"       # R caron
+<Multi_key> <,> <R> : "Ŗ"       # R cedilla
+<Multi_key> </> <S> : "Ś"       # S acute
+<Multi_key> <^> <S> : "Ŝ"       # S circumflex
+<Multi_key> <v> <S> : "Š"       # S caron
+<Multi_key> <,> <S> : "Ş"       # S cedilla (Turkish Ş) is default; to get S comma (Romanian Ș) - copy and paste.
+<Multi_key> <v> <T> : "Ť"       # T caron
+<Multi_key> <,> <T> : "Ț"       # T comma accent (Romanian Ț) is default; to get T cedilla (Gagauz or Dobrujan Tatar Ţ) - copy and paste.
+<Multi_key> <+> <T> : "Ŧ"       # T with stroke
+<Multi_key> </> <U> : "Ú"       # U acute
+<Multi_key> <\> <U> : "Ù"       # U grave
+<Multi_key> <^> <U> : "Û"       # U circumflex
+<Multi_key> <u> <U> : "Ŭ"       # U breve
+<Multi_key> <_> <U> : "Ū"       # U macron
+<Multi_key> <-> <U> : "Ũ"       # U tilde
+<Multi_key> <o> <U> : "Ů"       # U ring above
+<Multi_key> <c> <U> : "Ų"       # U ogonek
+<Multi_key> </> <W> : "Ẃ"       # W acute
+<Multi_key> <^> <W> : "Ŵ"       # W circumflex
+<Multi_key> </> <Y> : "Ý"       # Y acute
+<Multi_key> <^> <Y> : "Ŷ"       # Y circumflex
+<Multi_key> <"> <Y> : "Ÿ"       # Y diaeresis
+<Multi_key> <=> <U> : "Ű"       # U hungarumlaut/double acute
+<Multi_key> <"> <U> : "Ü"       # U umlaut/diaeresis [HTML: &Uuml;]
+<Multi_key> </> <Z> : "Ź"       # Z acute
+<Multi_key> <.> <Z> : "Ż"       # Z dot above
+<Multi_key> <v> <Z> : "Ž"       # Z caron
+<Multi_key> <o> <A> : "Å"       # A ring above
+<Multi_key> <"> <A> : "Ä"       # A umlaut/diaeresis [HTML: &Auml;]
+<Multi_key> <"> <O> : "Ö"       # O umlaut/diaeresis [HTML: &Ouml;]
+<Multi_key> <=> <O> : "Ő"       # O hungarumlaut/double acute
+<Multi_key> <+> <O> : "Ø"       # O with stroke
+# Alternate sequences for US standard keyboard without localization
+<Multi_key> <6> <A> : "Â"       # A circumflex
+<Multi_key> <6> <C> : "Ĉ"       # C circumflex
+<Multi_key> <6> <E> : "Ê"       # E circumflex
+<Multi_key> <6> <G> : "Ĝ"       # G circumflex
+<Multi_key> <6> <H> : "Ĥ"       # H circumflex
+<Multi_key> <6> <I> : "Î"       # I circumflex
+<Multi_key> <6> <J> : "Ĵ"       # J circumflex
+<Multi_key> <6> <O> : "Ô"       # O circumflex
+<Multi_key> <6> <S> : "Ŝ"       # S circumflex
+<Multi_key> <6> <U> : "Û"       # U circumflex
+<Multi_key> <6> <W> : "Ŵ"       # W circumflex
+<Multi_key> <6> <Y> : "Ŷ"       # Y circumflex
+<Multi_key> <3> <E> : "Ë"       # E diaeresis
+<Multi_key> <3> <I> : "Ï"       # I diaeresis
+<Multi_key> <3> <Y> : "Ÿ"       # Y diaeresis
+<Multi_key> <3> <U> : "Ü"       # U umlaut/diaeresis [HTML: &Uuml;]
+<Multi_key> <3> <A> : "Ä"       # A umlaut/diaeresis [HTML: &Auml;]
+<Multi_key> <3> <O> : "Ö"       # O umlaut/diaeresis [HTML: &Ouml;]
+
+# LOWERCASE ACCENTED LETTERS
+<Multi_key> </> <a> : "á"       # a acute
+<Multi_key> <\> <a> : "à"       # a grave
+<Multi_key> <^> <a> : "â"       # a circumflex
+<Multi_key> <v> <a> : "ǎ"       # a caron
+<Multi_key> <u> <a> : "ă"       # a breve
+<Multi_key> <_> <a> : "ā"       # a macron
+<Multi_key> <-> <a> : "ã"       # a tilde
+<Multi_key> <c> <a> : "ą"       # a ogonek
+<Multi_key> </> <c> : "ć"       # c acute
+<Multi_key> <.> <c> : "ċ"       # c dot above
+<Multi_key> <^> <c> : "ĉ"       # c circumflex
+<Multi_key> <v> <c> : "č"       # c caron
+<Multi_key> <,> <c> : "ç"       # c cedilla
+<Multi_key> <v> <d> : "ď"       # d caron
+<Multi_key> <+> <d> : "đ"       # d with stroke
+<Multi_key> </> <e> : "é"       # e acute
+<Multi_key> <\> <e> : "è"       # e grave
+<Multi_key> <.> <e> : "ė"       # e dot above
+<Multi_key> <^> <e> : "ê"       # e circumflex
+<Multi_key> <"> <e> : "ë"       # e diaeresis
+<Multi_key> <v> <e> : "ě"       # e caron
+<Multi_key> <u> <e> : "ĕ"       # e breve
+<Multi_key> <_> <e> : "ē"       # e macron
+<Multi_key> <c> <e> : "ę"       # e ogonek
+<Multi_key> <.> <g> : "ġ"       # g dot above
+<Multi_key> <^> <g> : "ĝ"       # g circumflex
+<Multi_key> <u> <g> : "ğ"       # g breve
+<Multi_key> <,> <g> : "ģ"       # g cedilla
+<Multi_key> </> <g> : "ģ"       # g acute
+<Multi_key> <^> <h> : "ĥ"       # h circumflex
+<Multi_key> <+> <h> : "ħ"       # h with stroke
+<Multi_key> </> <i> : "í"       # i acute
+<Multi_key> <\> <i> : "ì"       # i grave
+<Multi_key> <.> <i> : "ı"       # i dotless
+<Multi_key> <^> <i> : "î"       # i circumflex
+<Multi_key> <"> <i> : "ï"       # i diaeresis
+<Multi_key> <u> <i> : "ĭ"       # i breve
+<Multi_key> <_> <i> : "ī"       # i macron
+<Multi_key> <-> <i> : "ĩ"       # i tilde
+<Multi_key> <c> <i> : "į"       # i ogonek
+<Multi_key> </> <ĳ> : "íȷ́"      # ij acute (works only with the Dutch layout)
+<Multi_key> </> <j> : "ȷ́"       # j acute (dotless j + combining acute accent)
+<Multi_key> <^> <j> : "ĵ"       # j circumflex
+<Multi_key> <,> <k> : "ķ"       # k cedilla
+<Multi_key> </> <l> : "ĺ"       # l acute
+<Multi_key> <.> <l> : "ŀ"       # l middle dot
+<Multi_key> <v> <l> : "ľ"       # l caron
+<Multi_key> <,> <l> : "ļ"       # l cedilla
+<Multi_key> <+> <l> : "ł"       # l with stroke
+<Multi_key> </> <n> : "ń"       # n acute
+<Multi_key> <v> <n> : "ň"       # n caron
+<Multi_key> <-> <n> : "ñ"       # n tilde
+<Multi_key> <,> <n> : "ņ"       # n cedilla
+<Multi_key> </> <o> : "ó"       # o acute
+<Multi_key> <\> <o> : "ò"       # o grave
+<Multi_key> <^> <o> : "ô"       # o circumflex
+<Multi_key> <u> <o> : "ŏ"       # o breve
+<Multi_key> <_> <o> : "ō"       # o macron
+<Multi_key> <-> <o> : "õ"       # o tilde
+<Multi_key> </> <r> : "ŕ"       # r acute
+<Multi_key> <v> <r> : "ř"       # r caron
+<Multi_key> <,> <r> : "ŗ"       # r cedilla
+<Multi_key> </> <s> : "ś"       # s acute
+<Multi_key> <^> <s> : "ŝ"       # s circumflex
+<Multi_key> <v> <s> : "š"       # s caron
+<Multi_key> <,> <s> : "ş"       # s cedilla (Turkish ş) is default; to get s comma (Romanian ș) - copy and paste.
+<Multi_key> <v> <t> : "ť"       # t caron
+<Multi_key> <,> <t> : "ț"       # t comma accent (Romanian ț) is default; to get t cedilla (Gagauz or Dobrujan Tatar ţ) - copy and paste.
+<Multi_key> <+> <t> : "ŧ"       # t with stroke
+<Multi_key> </> <u> : "ú"       # u acute
+<Multi_key> <\> <u> : "ù"       # u grave
+<Multi_key> <^> <u> : "û"       # u circumflex
+<Multi_key> <u> <u> : "ŭ"       # u breve
+<Multi_key> <_> <u> : "ū"       # u macron
+<Multi_key> <-> <u> : "ũ"       # u tilde
+<Multi_key> <o> <u> : "ů"       # u ring above
+<Multi_key> <c> <u> : "ų"       # u ogonek
+<Multi_key> </> <w> : "ẃ"       # w acute
+<Multi_key> <^> <w> : "ŵ"       # w circumflex
+<Multi_key> </> <y> : "ý"       # y acute
+<Multi_key> <^> <y> : "ŷ"       # y circumflex
+<Multi_key> <"> <y> : "ÿ"       # y diaeresis
+<Multi_key> <=> <u> : "ű"       # u hungarumlaut/double acute
+<Multi_key> <"> <u> : "ü"       # u umlaut/diaeresis [HTML: &uuml;]
+<Multi_key> </> <z> : "ź"       # z acute
+<Multi_key> <.> <z> : "ż"       # z dot above
+<Multi_key> <v> <z> : "ž"       # z caron
+<Multi_key> <o> <a> : "å"       # a ring above
+<Multi_key> <"> <a> : "ä"       # a umlaut/diaeresis [HTML: &auml;]
+<Multi_key> <"> <o> : "ö"       # o umlaut/diaeresis [HTML: &ouml;]
+<Multi_key> <=> <o> : "ő"       # o hungarumlaut/double acute
+<Multi_key> <+> <o> : "ø"       # o with stroke
+# Alternate sequences for US standard keyboard without localization
+<Multi_key> <6> <a> : "â"       # a circumflex
+<Multi_key> <6> <c> : "ĉ"       # c circumflex
+<Multi_key> <6> <e> : "ê"       # e circumflex
+<Multi_key> <6> <g> : "ĝ"       # g circumflex
+<Multi_key> <6> <h> : "ĥ"       # h circumflex
+<Multi_key> <6> <i> : "î"       # i circumflex
+<Multi_key> <6> <j> : "ĵ"       # j circumflex
+<Multi_key> <6> <o> : "ô"       # o circumflex
+<Multi_key> <6> <s> : "ŝ"       # s circumflex
+<Multi_key> <6> <u> : "û"       # u circumflex
+<Multi_key> <6> <w> : "ŵ"       # w circumflex
+<Multi_key> <6> <y> : "ŷ"       # y circumflex
+<Multi_key> <3> <e> : "ë"       # e diaeresis
+<Multi_key> <3> <i> : "ï"       # i diaeresis
+<Multi_key> <3> <y> : "ÿ"       # y diaeresis
+<Multi_key> <3> <u> : "ü"       # u umlaut/diaeresis [HTML: &uuml;]
+<Multi_key> <3> <a> : "ä"       # a umlaut/diaeresis [HTML: &auml;]
+<Multi_key> <3> <o> : "ö"       # o umlaut/diaeresis [HTML: &ouml;]
+
+# STANDALONE ACCENTS
+# Trigger 1
+<Multi_key> <1> </> : "´"       # acute
+<Multi_key> <1> <\> : "`"       # grave
+<Multi_key> <1> <^> : "ˆ"       # circumflex
+<Multi_key> <1> <v> : "ˇ"       # caron
+<Multi_key> <1> <"> : "¨"       # diaeresis/umlaut/trema
+<Multi_key> <1> <-> : "˜"       # tilde
+<Multi_key> <1> <u> : "˘"       # breve
+<Multi_key> <1> <_> : "¯"       # macron
+<Multi_key> <1> <,> : "¸"       # cedilla
+<Multi_key> <1> <c> : "˛"       # ogonek
+<Multi_key> <1> <o> : "˚"       # ring above
+<Multi_key> <1> <.> : "˙"       # dot above
+<Multi_key> <1> <=> : "˝"       # hungarumlaut
+
+# LIGATURES AND OTHER CHARACTERS
+<Multi_key> <a> <e> : "æ"       # ae ligature
+<Multi_key> <A> <E> : "Æ"       # AE ligature
+<Multi_key> <d> <h> : "ð"       # eth
+<Multi_key> <D> <H> : "Ð"       # ETH
+<Multi_key> <i> <j> : "ĳ"       # ij ligature
+<Multi_key> <I> <J> : "Ĳ"       # IJ ligature
+<Multi_key> <n> <o> : "№"       # Numero sign [HTML: &numero;]
+<Multi_key> <o> <e> : "œ"       # oe ligature
+<Multi_key> <O> <E> : "Œ"       # OE ligature
+<Multi_key> <s> <s> : "ß"       # Eszett, germandbls, sz ligature
+<Multi_key> <t> <h> : "þ"       # thorn
+<Multi_key> <T> <H> : "Þ"       # THORN
+
+# PUNCTUATION
+<Multi_key> <l> <q> : "‘"       # left single quote
+<Multi_key> <r> <q> : "’"       # right single quote
+<Multi_key> <b> <q> : "‚"       # low-9 single quote, quotesinglbase
+<Multi_key> <l> <d> : "“"       # left double quote
+<Multi_key> <r> <d> : "”"       # right double quote
+<Multi_key> <b> <d> : "„"       # low-9 double quote, quotedblbase
+<Multi_key> <c> <q> : "‛"       # single high-reversed-9 quotation mark, single reversed comma quotation mark
+<Multi_key> <c> <d> : "‟"       # double high-reversed-9 quotation mark, double reversed comma quotation mark
+<Multi_key> <s> <less> : "‹"    # left single angle quote
+<Multi_key> <s> <greater> : "›" # right single angle quote
+<Multi_key> <d> <less> : "«"    # left double angle quote
+<Multi_key> <d> <greater> : "»" # right double angle quote
+<Multi_key> <3> <.> : "…"       # ellipsis
+<Multi_key> <n> <-> : "–"       # en dash
+<Multi_key> <m> <-> : "—"       # em dash
+<Multi_key> <o> <-> : "¯"       # overscore
+<Multi_key> <!> <!> : "¡"       # inverted exlamation mark
+<Multi_key> <?> <?> : "¿"       # inverted question mark
+<Multi_key> <.> <,> : ";"       # semicolon (two alternate sequences)
+<Multi_key> <,> <.> : ";"       # semicolon (two alternate sequences)
+<Multi_key> <.> <.> : ":"       # colon
+<Multi_key> <m> <d> : "·"       # middle dot [HTML: &centerdot;]
+<Multi_key> <b> <l> : "␣"       # open box (graphical representation of space character) [HTML: &blank;]
+
+# CURRENCY
+# Trigger 4
+# N.B. dollar, euro, pound and yen/yuan are on the keyboard layout
+<Multi_key> <4> <e> <u> : "€"   # euro
+<Multi_key> <4> <p> <s> : "£"   # pound sterling
+<Multi_key> <4> <y> <e> : "¥"   # yen/yuan (renminbi)
+<Multi_key> <4> <c> <e> : "¢"   # cent
+<Multi_key> <4> <r> <u> : "₹"   # Indian rupee
+<Multi_key> <4> <l> <i> : "₺"   # Turkish lira
+<Multi_key> <4> <w> <o> : "₩"   # Korean won
+<Multi_key> <4> <p> <o> : "₱"   # Philippine peso
+<Multi_key> <4> <r> <o> : "₽"   # Russian rouble
+# Less usable, old or deprecated symbols:
+<Multi_key> <4> <f> <l> : "ƒ"   # florin
+<Multi_key> <4> <p> <a> : "₧"   # Spanish Peseta
+<Multi_key> <4> <f> <f> : "₣"   # French or Swiss franc
+<Multi_key> <4> <x> <x> : "¤"   # (any) currency
+
+# SYMBOLS
+<Multi_key> <t> <m> : "™"       # trademark
+<Multi_key> <s> <m> : "℠"       # servicemark
+<Multi_key> <r> <e> : "®"       # registered trademark
+<Multi_key> <c> <r> : "©"       # copyright
+<Multi_key> <p> <a> : "§"       # section; paragraph
+<Multi_key> <s> <e> : "¶"       # paragraph, pilcrow
+<Multi_key> <d> <a> : "†"       # dagger [HTML: &dagger;]
+<Multi_key> <d> <d> : "‡"       # double dagger [HTML: &ddagger;]
+<Multi_key> <t> <d> : "⸸"       # turned dagger
+<Multi_key> <b> <u> : "•"       # bullet [HTML: &bull;]
+<Multi_key> <b> <b> : "¦"       # broken bar [HTML: &brvbar;]
+<Multi_key> <d> <g> : "°"       # degree
+<Multi_key> <p> <r> : "′"       # prime (for feet, minutes, or arcminutes) [HTML: &prime;]
+<Multi_key> <d> <p> : "″"       # double prime (for inches, seconds, or arcseconds) [HTML: &Prime;]
+<Multi_key> <m> <i> : "µ"       # micro (SI prefix symbol)
+<Multi_key> <b> <i> : "☛"       # black right pointing index
+<Multi_key> <w> <i> : "☞"       # white right pointing index
+
+# LOGIC AND MATH (see also ARROWS)
+<Multi_key> <d> <o> : "⋅"       # dot operator, multiplication dot [HTML: &sdot;]
+<Multi_key> <d> <j> : "v"       # logical disjunction (OR)
+<Multi_key> <n> <e> : "¬"       # negation (NOT)
+<Multi_key> <x> <o> : "⊕"       # circled plus; exclusive or (XOR)
+<Multi_key> <f> <a> : "∀"       # for all
+<Multi_key> <e> <x> : "∃"       # there exists
+<Multi_key> <!> <e> : "∄"       # there does not exist
+<Multi_key> <t> <f> : "∴"       # therefore
+<Multi_key> <b> <e> : "∵"       # because; since
+<Multi_key> <!> <=> : "≠"       # not equal
+<Multi_key> <a> <=> : "≈"       # approximately equal
+<Multi_key> <greater> <-> : "≥" # greater than or equal to
+<Multi_key> <less> <-> : "≤"    # less than or equal to
+<Multi_key> <+> <-> : "±"       # plus-minus
+<Multi_key> <-> <+> : "∓"       # minus-plus
+<Multi_key> <t> <i> : "×"       # multiplication or times sign
+<Multi_key> <d> <i> : "÷"       # division sign [HTML: &divide;]
+<Multi_key> <s> <r> : "√"       # square root [HTML: &Sqrt;]
+<Multi_key> <p> <m> : "‰"       # per mille [HTML: &permil;]
+<Multi_key> <=> <-> : "≡"       # equivalence
+<Multi_key> <i> <n> : "∞"       # infinity [HTML: &infin;]
+<Multi_key> <D> <E> : "∆"       # DELTA
+<Multi_key> <d> <e> : "δ"       # delta
+<Multi_key> <s> <u> : "∑"       # summation [HTML: &Sum;]
+<Multi_key> <P> <I> : "∏"       # product symbol (PI) [HTML: &prod;]
+<Multi_key> <p> <i> : "π"       # pi constant
+<Multi_key> <i> <s> : "∩"       # intersection
+<Multi_key> <u> <n> : "∪"       # union
+<Multi_key> <=> <s> : "⊂"       # is a subset of
+<Multi_key> <!> <s> : "⊄"       # is not subset of
+
+# ARROWS
+<Multi_key> <-> <less> : "←"            # left arrow
+<Multi_key> <-> <^> : "↑"               # up arrow
+<Multi_key> <-> <greater> : "→"         # right arrow
+<Multi_key> <-> <v> : "↓"               # down arrow
+<Multi_key> <less> <greater> : "↔"      # left-right arrow; LOGIC: equivalent
+<Multi_key> <^> <v> : "↕"               # up-down arrow
+<Multi_key> <=> <less> : "⇐"            # left double arrow
+<Multi_key> <=> <^> : "⇑"               # up double arrow
+<Multi_key> <=> <greater> : "⇒"         # right double arrow; LOGIC: implies
+<Multi_key> <+> <=> <greater> : "⇏"     # right double arrow w/ stroke; LOGIC: does not imply
+<Multi_key> <=> <v> : "⇓"               # down double arrow
+<Multi_key> <less> <=> <greater> : "⇔"  # left-right double arrow; LOGIC: equivalent
+<Multi_key> <^> <=> <v> : "⇕"           # up-down double arrow
+# Alternate sequences for US standard keyboard without localization
+<Multi_key> <6> <v> : "↕"               # up-down arrow
+<Multi_key> <6> <=> <v> : "⇕"           # up-down double arrow
+
+
+# SUPERSCRIPTS & SUBSCRIPTS
+<Multi_key> <s> <a> : "ª"       # feminine ordinal indicator
+<Multi_key> <s> <o> : "º"       # masculine ordinal indicator
+<Multi_key> <s> <1> : "¹"       # superscript 1
+<Multi_key> <s> <2> : "²"       # superscript 2
+<Multi_key> <s> <3> : "³"       # superscript 3
+<Multi_key> <s> <4> : "⁴"       # superscript 4
+<Multi_key> <s> <5> : "⁵"       # superscript 5
+<Multi_key> <s> <6> : "⁶"       # superscript 6
+<Multi_key> <s> <7> : "⁷"       # superscript 7
+<Multi_key> <s> <8> : "⁸"       # superscript 8
+<Multi_key> <s> <9> : "⁹"       # superscript 9
+<Multi_key> <s> <0> : "⁰"       # superscript 0
+<Multi_key> <s> <+> : "⁺"       # superscript +
+<Multi_key> <s> <-> : "⁻"       # superscript -
+<Multi_key> <s> <=> : "⁼"       # superscript =
+<Multi_key> <s> <(> : "⁽"       # superscript (
+<Multi_key> <s> <)> : "⁾"       # superscript )
+<Multi_key> <s> <n> : "ⁿ"       # superscript n
+<Multi_key> <u> <1> : "₁"       # subscript 1
+<Multi_key> <u> <2> : "₂"       # subscript 2
+<Multi_key> <u> <3> : "₃"       # subscript 3
+<Multi_key> <u> <4> : "₄"       # subscript 4
+<Multi_key> <u> <5> : "₅"       # subscript 5
+<Multi_key> <u> <6> : "₆"       # subscript 6
+<Multi_key> <u> <7> : "₇"       # subscript 7
+<Multi_key> <u> <8> : "₈"       # subscript 8
+<Multi_key> <u> <9> : "₉"       # subscript 9
+<Multi_key> <u> <0> : "₀"       # subscript 0
+<Multi_key> <u> <+> : "₊"       # subscript +
+<Multi_key> <u> <-> : "₋"       # subscript -
+<Multi_key> <u> <=> : "₌"       # subscript =
+<Multi_key> <u> <(> : "₍"       # subscript (
+<Multi_key> <u> <)> : "₎"       # subscript )
+
+# FRACTIONS
+<Multi_key> <1> <2> : "½"    # 1/2
+<Multi_key> <1> <3> : "⅓"    # 1/3
+<Multi_key> <1> <4> : "¼"    # 1/4
+<Multi_key> <1> <5> : "⅕"    # 1/5
+<Multi_key> <1> <6> : "⅙"    # 1/6
+<Multi_key> <1> <7> : "⅐"    # 1/7
+<Multi_key> <1> <8> : "⅛"    # 1/8
+<Multi_key> <1> <9> : "⅑"    # 1/9
+<Multi_key> <2> <3> : "⅔"    # 2/3
+<Multi_key> <2> <5> : "⅖"    # 2/5
+<Multi_key> <2> <7> : "²⁄₇"  # 2/7
+<Multi_key> <2> <9> : "²⁄₉"  # 2/9
+<Multi_key> <3> <4> : "¾"    # 3/4
+<Multi_key> <3> <5> : "⅗"    # 3/5
+<Multi_key> <3> <7> : "³⁄₇"  # 3/7
+<Multi_key> <3> <8> : "⅜"    # 3/8
+<Multi_key> <4> <5> : "⅘"    # 4/5
+<Multi_key> <4> <7> : "⁴⁄₇"  # 4/7
+<Multi_key> <4> <9> : "⁴⁄₉"  # 4/9
+<Multi_key> <5> <6> : "⅚"    # 5/6
+<Multi_key> <5> <7> : "⁵⁄₇"  # 5/7
+<Multi_key> <5> <8> : "⅝"    # 5/8
+<Multi_key> <5> <9> : "⁵⁄₉"  # 5/9
+<Multi_key> <6> <7> : "⁶⁄₇"  # 6/7
+<Multi_key> <7> <8> : "⅞"    # 7/8
+<Multi_key> <7> <9> : "⁷⁄₉"  # 7/9
+<Multi_key> <8> <9> : "⁸⁄₉"  # 8/9
+<Multi_key> <1> <0> : "⅒"   # 1/10
+<Multi_key> </> <1> <6> : "⅟₁₆" # 1/16
+<Multi_key> </> <3> <2> : "⅟₃₂" # 1/32
+<Multi_key> </> <1> </> : "⅟"   # 1/ (followed by subscript numbers)
+<Multi_key> </> </> : "⁄"      # Fraction Slash (precede by superscript and follow by subscript numbers)
+
+# ENCLOSED ALPHANUMERICS
+# Triggers ( and )
+<Multi_key> <(> <0> <)> : "⓪"
+<Multi_key> <(> <1> <)> : "①"
+<Multi_key> <(> <2> <)> : "②"
+<Multi_key> <(> <3> <)> : "③"
+<Multi_key> <(> <4> <)> : "④"
+<Multi_key> <(> <5> <)> : "⑤"
+<Multi_key> <(> <6> <)> : "⑥"
+<Multi_key> <(> <7> <)> : "⑦"
+<Multi_key> <(> <8> <)> : "⑧"
+<Multi_key> <(> <9> <)> : "⑨"
+<Multi_key> <(> <1> <0> <)> : "⑩"
+<Multi_key> <(> <1> <1> <)> : "⑪"
+<Multi_key> <(> <1> <2> <)> : "⑫"
+<Multi_key> <(> <1> <3> <)> : "⑬"
+<Multi_key> <(> <1> <4> <)> : "⑭"
+<Multi_key> <(> <1> <5> <)> : "⑮"
+<Multi_key> <(> <1> <6> <)> : "⑯"
+<Multi_key> <(> <1> <7> <)> : "⑰"
+<Multi_key> <(> <1> <8> <)> : "⑱"
+<Multi_key> <(> <1> <9> <)> : "⑲"
+<Multi_key> <(> <2> <0> <)> : "⑳"
+<Multi_key> <(> <A> <)> : "Ⓐ"
+<Multi_key> <(> <B> <)> : "Ⓑ"
+<Multi_key> <(> <C> <)> : "Ⓒ"
+<Multi_key> <(> <D> <)> : "Ⓓ"
+<Multi_key> <(> <E> <)> : "Ⓔ"
+<Multi_key> <(> <F> <)> : "Ⓕ"
+<Multi_key> <(> <G> <)> : "Ⓖ"
+<Multi_key> <(> <H> <)> : "Ⓗ"
+<Multi_key> <(> <I> <)> : "Ⓘ"
+<Multi_key> <(> <J> <)> : "Ⓙ"
+<Multi_key> <(> <K> <)> : "Ⓚ"
+<Multi_key> <(> <L> <)> : "Ⓛ"
+<Multi_key> <(> <M> <)> : "Ⓜ"
+<Multi_key> <(> <N> <)> : "Ⓝ"
+<Multi_key> <(> <O> <)> : "Ⓞ"
+<Multi_key> <(> <P> <)> : "Ⓟ"
+<Multi_key> <(> <Q> <)> : "Ⓠ"
+<Multi_key> <(> <R> <)> : "Ⓡ"
+<Multi_key> <(> <S> <)> : "Ⓢ"
+<Multi_key> <(> <T> <)> : "Ⓣ"
+<Multi_key> <(> <U> <)> : "Ⓤ"
+<Multi_key> <(> <V> <)> : "Ⓥ"
+<Multi_key> <(> <W> <)> : "Ⓦ"
+<Multi_key> <(> <X> <)> : "Ⓧ"
+<Multi_key> <(> <Y> <)> : "Ⓨ"
+<Multi_key> <(> <Z> <)> : "Ⓩ"
+<Multi_key> <(> <a> <)> : "ⓐ"
+<Multi_key> <(> <b> <)> : "ⓑ"
+<Multi_key> <(> <c> <)> : "ⓒ"
+<Multi_key> <(> <d> <)> : "ⓓ"
+<Multi_key> <(> <e> <)> : "ⓔ"
+<Multi_key> <(> <f> <)> : "ⓕ"
+<Multi_key> <(> <g> <)> : "ⓖ"
+<Multi_key> <(> <h> <)> : "ⓗ"
+<Multi_key> <(> <i> <)> : "ⓘ"
+<Multi_key> <(> <j> <)> : "ⓙ"
+<Multi_key> <(> <k> <)> : "ⓚ"
+<Multi_key> <(> <l> <)> : "ⓛ"
+<Multi_key> <(> <m> <)> : "ⓜ"
+<Multi_key> <(> <n> <)> : "ⓝ"
+<Multi_key> <(> <o> <)> : "ⓞ"
+<Multi_key> <(> <p> <)> : "ⓟ"
+<Multi_key> <(> <q> <)> : "ⓠ"
+<Multi_key> <(> <r> <)> : "ⓡ"
+<Multi_key> <(> <s> <)> : "ⓢ"
+<Multi_key> <(> <t> <)> : "ⓣ"
+<Multi_key> <(> <u> <)> : "ⓤ"
+<Multi_key> <(> <v> <)> : "ⓥ"
+<Multi_key> <(> <w> <)> : "ⓦ"
+<Multi_key> <(> <x> <)> : "ⓧ"
+<Multi_key> <(> <y> <)> : "ⓨ"
+<Multi_key> <(> <z> <)> : "ⓩ"
+
+# GREEK SMALL LETTERS
+# Trigger 8
+<Multi_key> <8> <a> : "α" # alpha
+<Multi_key> <8> <b> : "β" # beta
+<Multi_key> <8> <c> : "ψ" # psi
+<Multi_key> <8> <d> : "δ" # delta
+<Multi_key> <8> <e> : "ε" # epsilon
+<Multi_key> <8> <f> : "φ" # phi
+<Multi_key> <8> <g> : "γ" # gamma
+<Multi_key> <8> <h> : "η" # eτα
+<Multi_key> <8> <i> : "ι" # iοτα
+<Multi_key> <8> <j> : "ξ" # xi
+<Multi_key> <8> <k> : "κ" # kappa
+<Multi_key> <8> <l> : "λ" # lambda
+<Multi_key> <8> <m> : "μ" # mu
+<Multi_key> <8> <n> : "ν" # nu
+<Multi_key> <8> <o> : "ο" # omicron
+<Multi_key> <8> <p> : "π" # pi
+<Multi_key> <8> <r> : "ρ" # rho
+<Multi_key> <8> <s> : "σ" # sigma
+<Multi_key> <8> <t> : "τ" # tau
+<Multi_key> <8> <u> : "θ" # theta
+<Multi_key> <8> <v> : "ω" # omega
+<Multi_key> <8> <w> : "ς" # final sigma
+<Multi_key> <8> <x> : "χ" # chi
+<Multi_key> <8> <y> : "υ" # upsilon
+<Multi_key> <8> <z> : "ζ" # zeta
+
+# GREEK CAPITAL LETTERS
+# Trigger 8
+<Multi_key> <8> <A> : "Α" # ALPHA
+<Multi_key> <8> <B> : "Β" # BETA
+<Multi_key> <8> <C> : "Ψ" # PSI
+<Multi_key> <8> <D> : "Δ" # DELTA
+<Multi_key> <8> <E> : "Ε" # EPSILON
+<Multi_key> <8> <F> : "Φ" # PHI
+<Multi_key> <8> <G> : "Γ" # GAMMA
+<Multi_key> <8> <H> : "Η" # ΕΤΑ
+<Multi_key> <8> <I> : "Ι" # ΙΟΤΑ
+<Multi_key> <8> <J> : "Ξ" # XI
+<Multi_key> <8> <K> : "Κ" # KAPPA
+<Multi_key> <8> <L> : "Λ" # LAMBDA
+<Multi_key> <8> <M> : "Μ" # MU
+<Multi_key> <8> <N> : "Ν" # NU
+<Multi_key> <8> <O> : "Ο" # OMICRON
+<Multi_key> <8> <P> : "Π" # PI
+<Multi_key> <8> <R> : "Ρ" # RHO
+<Multi_key> <8> <S> : "Σ" # SIGMA
+<Multi_key> <8> <T> : "Τ" # TAU
+<Multi_key> <8> <U> : "Θ" # THETA
+<Multi_key> <8> <V> : "Ω" # OMEGA
+<Multi_key> <8> <X> : "Χ" # CHI
+<Multi_key> <8> <Y> : "Υ" # UPSILON
+<Multi_key> <8> <Z> : "Ζ" # ZETA
+
+# CYRILLIC
+# Trigger 2 
+# This is a Pan-Cyrillic layout similar to CyrPhone phonetic layout
+# The AltGr plane of CyrPhone is replaced by the <2> </> plane
+<Multi_key> <2> <a>           : "а" # a
+<Multi_key> <2> <A>           : "А" # A
+<Multi_key> <2> <b>           : "б" # be
+<Multi_key> <2> <B>           : "Б" # BE
+<Multi_key> <2> <v>           : "в" # ve
+<Multi_key> <2> <V>           : "В" # VE
+<Multi_key> <2> <g>           : "г" # ghe
+<Multi_key> <2> <G>           : "Г" # GHE
+<Multi_key> <2> </> <g>       : "ґ" # ghe with upturn (Ukrainian)
+<Multi_key> <2> </> <G>       : "Ґ" # GHE with upturn (Ukrainian)
+<Multi_key> <2> </> <j>       : "ѓ" # gje (Macedonian)
+<Multi_key> <2> </> <J>       : "Ѓ" # GJE (Macedonian)
+<Multi_key> <2> <d>           : "д" # de
+<Multi_key> <2> <D>           : "Д" # DE
+<Multi_key> <2> </> <d>       : "ђ" # dje (Serbian)
+<Multi_key> <2> </> <D>       : "Ђ" # DJE (Serbian)
+<Multi_key> <2> <e>           : "е" # ye
+<Multi_key> <2> <E>           : "Е" # YE
+<Multi_key> <2> </> <e>       : "ё" # yo
+<Multi_key> <2> </> <E>       : "Ё" # YO
+<Multi_key> <2> </> <\>       : "є" # ye Ukrainian
+<Multi_key> <2> </> <|>       : "Є" # YE Ukrainian
+<Multi_key> <2> <]>           : "ж" # zhe (US layout)
+<Multi_key> <2> <">           : "ж" # zhe (localized)
+<Multi_key> <2> <}>           : "Ж" # ZHE
+<Multi_key> <2> <z>           : "з" # ze
+<Multi_key> <2> <Z>           : "З" # ZE
+<Multi_key> <2> <i>           : "и" # i
+<Multi_key> <2> <I>           : "И" # I
+<Multi_key> <2> <j>           : "й" # short i
+<Multi_key> <2> <J>           : "Й" # short I
+<Multi_key> <2> </> <i>       : "і" # i (Belarusian/Ukrainian)
+<Multi_key> <2> </> <I>       : "І" # I (Belarusian/Ukrainian)
+<Multi_key> <2> </> <y>       : "ї" # yi (Ukrainian)
+<Multi_key> <2> </> <Y>       : "Ї" # YI (Ukrainian)
+<Multi_key> <2> <k>           : "к" # ka
+<Multi_key> <2> <K>           : "К" # KA
+<Multi_key> <2> </> <k>       : "ќ" # kje (Macedonian)
+<Multi_key> <2> </> <K>       : "Ќ" # KJE (Macedonian)
+<Multi_key> <2> <l>           : "л" # el
+<Multi_key> <2> <L>           : "Л" # EL
+<Multi_key> <2> </> <l>       : "љ" # lje (Macedonian/Serbian)
+<Multi_key> <2> </> <L>       : "Љ" # LJE (Macedonian/Serbian)
+<Multi_key> <2> <m>           : "м" # em
+<Multi_key> <2> <M>           : "М" # EM
+<Multi_key> <2> <n>           : "н" # en
+<Multi_key> <2> <N>           : "Н" # EN
+<Multi_key> <2> </> <n>       : "њ" # nje (Macedonian/Serbian)
+<Multi_key> <2> </> <N>       : "Њ" # NJE (Macedonian/Serbian)
+<Multi_key> <2> <o>           : "о" # o
+<Multi_key> <2> <O>           : "О" # O
+<Multi_key> <2> <p>           : "п" # pe
+<Multi_key> <2> <P>           : "П" # PE
+<Multi_key> <2> <r>           : "р" # er
+<Multi_key> <2> <R>           : "Р" # ER
+<Multi_key> <2> <s>           : "с" # es
+<Multi_key> <2> <S>           : "С" # ES
+<Multi_key> <2> <t>           : "т" # te
+<Multi_key> <2> <T>           : "Т" # TE
+<Multi_key> <2> </> <c>       : "ћ" # TSHE (Serbian)
+<Multi_key> <2> </> <C>       : "Ћ" # TSHE (Serbian)
+<Multi_key> <2> </> <u>       : "ў" # Short u (Belarusian)
+<Multi_key> <2> </> <U>       : "Ў" # Short U (Belarusian)
+<Multi_key> <2> <u>           : "у" # u
+<Multi_key> <2> <U>           : "У" # U
+<Multi_key> <2> <f>           : "ф" # ef
+<Multi_key> <2> <F>           : "Ф" # EF
+<Multi_key> <2> <x>           : "х" # ha
+<Multi_key> <2> <X>           : "Х" # HA
+<Multi_key> <2> <c>           : "ц" # tse
+<Multi_key> <2> <C>           : "Ц" # TSE
+<Multi_key> <2> <h>           : "ч" # che
+<Multi_key> <2> <H>           : "Ч" # CHE
+<Multi_key> <2> </> <">       : "џ" # dzhe (Macedonian/Serbian)
+<Multi_key> <2> </> <}>       : "Џ" # DZHE (Macedonian/Serbian)
+<Multi_key> <2> <w>           : "ш" # sha
+<Multi_key> <2> <W>           : "Ш" # SHA
+<Multi_key> <2> </> <w>       : "щ" # shsha
+<Multi_key> <2> </> <W>       : "Щ" # SHSHA
+<Multi_key> <2> <`>           : "щ" # shsha (` can be changed to a corresponding localized key when using a non-US layout or type AltGr-`)
+<Multi_key> <2> <~>           : "Щ" # SHSHA (~ can be changed to a corresponding localized key when using a non-US layout or type AltGr-~)
+<Multi_key> <2> <=>           : "ъ" # hard sign
+<Multi_key> <2> <+>           : "Ъ" # HARD SIGN
+<Multi_key> <2> <y>           : "ы" # yeri
+<Multi_key> <2> <Y>           : "Ы" # YERI
+<Multi_key> <2> <->           : "ь" # soft sign
+<Multi_key> <2> <_>           : "Ь" # SOFT SIGN
+<Multi_key> <2> <\>           : "э" # e
+<Multi_key> <2> <|>           : "Э" # E
+<Multi_key> <2> <[>           : "ю" # yu (US layout)
+<Multi_key> <2> <^>           : "ю" # yu (localized)
+<Multi_key> <2> <{>           : "Ю" # YU
+<Multi_key> <2> <q>           : "я" # ya
+<Multi_key> <2> <Q>           : "Я" # YA
+<Multi_key> <2> <#>           : "№" # Numero sign
+<Multi_key> <2> <%>           : "€" # euro sign
+<Multi_key> <2> </> <r>       : "₽" # rouble sign
+
+# IPA (PHONETIC TRANSCRIPTION)
+# Trigger 7 
+# General principles:
+# X-SAMPA notation is used whenever it conforms to the general principles of this system (e.g. I, S, T, s\, z\, etc.)
+# However, there are some differences from X-SAMPA (X-SAMPA is shown when it differs):
+# Upside down letterforms are input as double letters (if uppercase variant, only the second one is in uppercase)
+# Greek-inspired letterforms start with 8
+# Letterforms with stroke start with +
+# Nasals start with -
+# Modification of preceding sound denoted with superscript in IPA is marked as n^ where n is the type of modification
+# Duplicate exists for IPA ɔ, i.e. 'cc' and '7O' (cf. X-SAMPA O). 
+# However œ is only '7oe' (cf. X-SAMPA 9) and corresponding nasal '7-9' (cf. X-SAMPA 9~) because '79' is fraction 7/9.
+# N.B. Not all rare IPA characters are included. This is only a selection of the most used symbols.
+<Multi_key> <7> <8> <b>   : "β" # as in Spanish beBer (X-SAMPA B)
+<Multi_key> <7> <8> <f>   : "ɸ" # as in Japanise Fuku (X-SAMPA p\)
+<Multi_key> <7> <8> <g>   : "ɣ" # as in Spanish amiGo (X-SAMPA G)
+<Multi_key> <7> <8> <x>   : "χ" # voiceless uvular fricative as in German DaCH (cf. velar x and palatal ç) (X-SAMPA X)
+<Multi_key> <7> <'>       : "ˈ" # primary stress (X-SAMPA ")
+<Multi_key> <7> <,>       : "ˌ" # secondary stress (X-SAMPA %)
+<Multi_key> <7> <.> <.>   : "ː" # long sign (X-SAMPA :)
+<Multi_key> <7> <.> <\>   : "ˑ" # half-long sign (X-SAMPA :\)
+<Multi_key> <7> <?> <?>   : "ʔ" # glottal stop as in Arabic (X-SAMPA ?)
+<Multi_key> <7> <?> <\>   : "ʕ" # voiced pharyngeal approximant as in Arabic or Hebrew
+<Multi_key> <7> <@> <\>   : "ɘ" # close-mid central unrounded vowel (mirrored letter e, different from turned letter e schwa 'ə')
+<Multi_key> <7> <+> <h>   : "ħ" # voiceless pharyngeal fricative as in Arabic (X-SAMPA X\)
+<Multi_key> <7> <+> <i>   : "ɨ" # as in Russian тЫ (X-SAMPA 1)
+<Multi_key> <7> <+> <o>   : "ø" # close-mid front rounded vowel as in Finnish ÖtÖkkä (X-SAMPA 2)
+<Multi_key> <7> <-> <9>   : "œ̃" # as in French UN (X-SAMPA 9~)
+<Multi_key> <7> <-> <A>   : "ɑ̃" # as in French (X-SAMPA A~)
+<Multi_key> <7> <-> <a>   : "ɐ̃" # as in Portuguese cANto
+<Multi_key> <7> <-> <e>   : "ẽ" # as in Portuguese cENtro
+<Multi_key> <7> <-> <E>   : "ɛ̃" # as in French fAIM
+<Multi_key> <7> <-> <i>   : "ĩ" # as in Portuguese sIM 
+<Multi_key> <7> <-> <j>   : "j̃" # nasal j consonant as in Portuguese or Polish
+<Multi_key> <7> <-> <O>   : "ɔ̃" # as in French bON
+<Multi_key> <7> <-> <o>   : "õ" # as in Portuguese sOMbra
+<Multi_key> <7> <-> <u>   : "ũ" # as in Portuguese mUNdo
+<Multi_key> <7> <-> <w>   : "w̃" # nasal w consonant as in Portuguese or Polish
+<Multi_key> <7> <A>       : "ɑ" # as in British English cALf
+<Multi_key> <7> <a> <A>   : "ɒ" # as in American English thOUGHt(open back rounded vowel) (X-SAMPA Q)
+<Multi_key> <7> <a> <a>   : "ɐ" # as in German opER (near-open central vowel) (X-SAMPA 6)
+<Multi_key> <7> <a> <e>   : "æ" # as in English bAt (X-SAMPA {)
+<Multi_key> <7> <B> <\>   : "ʙ" # bilabial trill
+<Multi_key> <7> <C>       : "ç" # as in German iCH
+<Multi_key> <7> <c> <c>   : "ɔ" # as in French nOte (can also be typed '7O') (X-SAMPA O)
+<Multi_key> <7> <D>       : "ð" # as in English THis
+<Multi_key> <7> <E>       : "ɛ" # as in English bEt
+<Multi_key> <7> <e> <e>   : "ə" # as in English Alone (X-SAMPA @)
+<Multi_key> <7> <e> <E>   : "ɜ" # open-mid central unrounded vowel as in Texan English bUd (X-SAMPA 3)
+<Multi_key> <7> <g> <^>   : "ˠ" # velarization of preceding sound (X-SAMPA _G)
+<Multi_key> <7> <h> <\>   : "ɦ" # as in Czech Hrad
+<Multi_key> <7> <h> <^>   : "ʰ" # aspiration of preceding sound (X-SAMPA _h)
+<Multi_key> <7> <h> <h>   : "ɥ" # as in French hUit (X-SAMPA H)
+<Multi_key> <7> <I>       : "ɪ" # as in English bIt
+<Multi_key> <7> <j> <\>   : "ʝ" # voiced palatal fricative as in Swedish Jord or Greek Γεια
+<Multi_key> <7> <j> <^>   : "ʲ" # palatalization of preceding sound (X-SAMPA ' or _j)
+<Multi_key> <7> <l> <\>   : "ɺ" # alveolar lateral flap as in Japanese kokoRo
+<Multi_key> <7> <l> <(>   : "ɭ" # retroflex lateral approximant as in Swedish soRL (X-SAMPA l`)
+<Multi_key> <7> <l> <j>   : "ʎ" # as in Spanish LLamar (X-SAMPA L)
+<Multi_key> <7> <M>       : "ɱ" # voiced labiodental nasal as in Swedish fraMför (X-SAMPA F)
+<Multi_key> <7> <m> <\>   : "ɰ" # voiced velar approximant (X-SAMPA M\)
+<Multi_key> <7> <m> <M>   : "ɯ" # close back unrounded vowel as in Chinese rÌ (X-SAMPA M)
+<Multi_key> <7> <N>       : "ŋ" # voiced velar nasal as in Swedish iNGen or Finnish keNkä
+<Multi_key> <7> <n> <(>   : "ɳ" # as in Swedish höRN (X-SAMPA n`)
+<Multi_key> <7> <n> <j>   : "ɲ" # as in Spanish año (X-SAMPA J)
+<Multi_key> <7> <O>       : "ɔ" # as in French nOte (can also be typed '7cc')
+<Multi_key> <7> <o> <e>   : "œ" # open-mid front rounded vowel as in French jEUne (X-SAMPA 9) (corresponding nasal is typed '7-9')
+<Multi_key> <7> <o> <E>   : "ɶ" # open front rounded vowel as in Swedish skÖRd (X-SAMPA &)
+<Multi_key> <7> <r> <\>   : "ɹ" # alveolar and/or postalveolar approximant as is American/Australian English Red
+<Multi_key> <7> <R> <\>   : "ʀ" # voiced uvular trill as in German Rot
+<Multi_key> <7> <r> <(>   : "ɽ" # voiced retroflex flap as in Bengali or some Swedish dialects (X-SAMPA r`)
+<Multi_key> <7> <r> <|>   : "ɻ" # voiced retroflex approximant as in Tamil or English dialects (X-SAMPA r\`)
+<Multi_key> <7> <r> <A>   : "ɑ˞" # as in American English cAR (X-SAMPA A`); poorly supported composite character!
+<Multi_key> <7> <r> <e>   : "ɚ" # as in American English dinnER (X-SAMPA @`)
+<Multi_key> <7> <r> <E>   : "ɝ" # as in American English hEARse (X-SAMPA 3`)
+<Multi_key> <7> <r> <h>   : "ɤ" # (Ram's Horn symbol) as in Estonian kÕrv (X-SAMPA 7)
+<Multi_key> <7> <r> <O>   : "ɔ˞" # as in American English wAR (X-SAMPA O`); poorly supported composite character!
+<Multi_key> <7> <r> <r>   : "ɹ" # alveolar and/or postalveolar approximant as is American/Australian English Red (X-SAMPA r\)
+<Multi_key> <7> <r> <R>   : "ʁ" # voiced uvular fricative as in French paRi (X-SAMPA R)
+<Multi_key> <7> <r> <v>   : "ʴ" # Rhotic Vowel sign (X-SAMPA `)
+<Multi_key> <7> <S>       : "ʃ" # as in English SHip
+<Multi_key> <7> <s> <\>   : "ɕ" # as in Chinese Xiăo
+<Multi_key> <7> <s> <(>   : "ʂ" # as in Swedish maRS (X-SAMPA s`)
+<Multi_key> <7> <T>       : "ɵ" # as in English THing
+<Multi_key> <7> <t> <(>   : "ʈ" # retroflex plosive as in Swedish kaRTa (X-SAMPA t`)
+<Multi_key> <7> <U>       : "ʊ" # as in English tOOk
+<Multi_key> <7> <v> <\>   : "ʋ" # labiodental approximant as in Finnish VauVa or Dutch Wang
+<Multi_key> <7> <v> <v>   : "ʌ" # as in English bUt
+<Multi_key> <7> <w> <^>   : "ʷ" # labio-velarization of preceding sound
+<Multi_key> <7> <w> <W>   : "ʍ" # voiceless labial–velar fricative as in English WHine (X-SAMPA W)
+<Multi_key> <7> <x> <\>   : "ɧ" # voiceless palatal-velar fricative as in Swedish SKJuta
+<Multi_key> <7> <Z>       : "ʒ" # as in English treaSure
+<Multi_key> <7> <z> <\>   : "ʑ" # as in Czech Život
+<Multi_key> <7> <z> <(>   : "ʐ" # as in voiced retroflex fricative as in Russian Жена (X-SAMPA z`)
+# end of XCompose table
