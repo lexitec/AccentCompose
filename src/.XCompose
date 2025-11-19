@@ -2,6 +2,7 @@
 
 # User-defined .XCompose key sequences for use with a US (ANSI) keyboard and/or AccentCompose
 # Copyright © 2025 Kari Eveli and Lexitec.
+# Version 3.0 (2025-11-19) for plain US keyboard and/or AccentCompose localized keyboard DLLs.
 # These sequences can be used with a standard US keyboard in any OS that supports .XCompose files
 # or with the AccentCompose system, i.e. a unified US keyboard hardware-based European multi-layout, 
 # keyboard driver and Compose key system (download free setup program from https://www.uskbd.eu/).
@@ -108,9 +109,9 @@
 # T comma accent (Romanian Ț) is default; to get T cedilla (Gagauz or Dobrujan Tatar Ţ) - copy and paste.
 # Dutch Ĳ acute is rendered as two letters "ÍJ́"; <Multi_key> </> <Ĳ> works only with the Dutch layout, otherwise use acute I and J separately
 #
-# Important note for MS Word users: Word has conflicting default key sequences that should be deleted
-# if and when they interfere with AccentCompose.
-# Read the attached Note on Word key sequences for detailed instructions.
+# Important note for MS Word users of the localized versions of AccentCompose: Word has conflicting default key sequences that should
+# be deleted if and when they interfere with AccentCompose. Read the 'Note on Word key sequences' for detailed instructions that can be found 
+# in the AccentCompose folder after running AC_setup.exe.
 #
 
 # UPPERCASE ACCENTED LETTERS
