@@ -7,7 +7,7 @@ The main purpose of the AccentCompose system is to enable easy typing of all acc
 
 AccentCompose GitHub plain US version consists of
 1. US, Cyrillic and Greek keyboard layouts as well as a CheatSheet for all the key sequences (PDF diagrams that can be printed and laminated)
-2. a ready-to-use key sequence file for WinCompose (.XCompose).
+2. a ready-to-use key sequence file for WinCompose (Windows) or any other similar rendering engine in other operating systems (.XCompose).
 
 Hardware requirements: standard US keyboard (key combinations may work with other keyboards but labeling may be confusing)
 
