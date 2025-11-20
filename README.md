@@ -6,8 +6,8 @@ AccentCompose is available in two versions: This GitHub version uses a plain US 
 The main purpose of the AccentCompose system is to enable easy typing of all accented letters present in European languages. Additionally, the .XCompose file supports many symbols, enclosed alphanumerics, Greek and Cyrillic letters as well as IPA phonetics. 
 
 AccentCompose GitHub plain US version consists of
-1. US keyboard AccentCompose layout (a PDF diagram that can be printed and laminated)
-2. ready-to-use key sequence file for WinCompose (.XCompose).
+1. US, Cyrillic and Greek keyboard layouts as well as a CheatSheet for all the key sequences (PDF diagrams that can be printed and laminated)
+2. a ready-to-use key sequence file for WinCompose (.XCompose).
 
 Hardware requirements: standard US keyboard (key combinations may work with other keyboards but labeling may be confusing)
 
