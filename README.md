@@ -15,7 +15,7 @@ Software requirements: .XCompose rendering engine like in X.Org-based Linux dist
 
 # Downloading WinCompose
 
-In WindowNo Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard
+No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard
 .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
 
 # Design philosophy
