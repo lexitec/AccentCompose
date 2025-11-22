@@ -11,7 +11,7 @@ AccentCompose GitHub plain US version consists of
 
 **Hardware requirements:** standard US keyboard (key combinations may work with other keyboards but labeling and the supplied layout charts may be confusing)
 
-**Software requirements:** .XCompose rendering engine like in X.Org-based Linux distributions: Ubuntu, Red Hat, Centos, Fedora, or Arch Linux. In Windows, WinCompose is recommended. In any case, only AccentCompose .XCompose file should be loaded to avoid key sequence conflict.
+**Software requirements:** .XCompose rendering engine like in X.Org-based Linux distributions: Ubuntu, Red Hat, Centos, Fedora, or Arch Linux. In Windows, WinCompose is recommended. In any case, only AccentCompose .XCompose file should be loaded to avoid key sequence conflicts.
 
 # Downloading WinCompose for Windows use
 No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
