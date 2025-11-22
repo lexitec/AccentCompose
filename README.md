@@ -9,14 +9,12 @@ AccentCompose GitHub plain US version consists of
 1. US, Cyrillic and Greek keyboard layouts as well as a CheatSheet for all the key sequences (PDF diagrams that can be printed and laminated)
 2. a ready-to-use key sequence file for WinCompose (Windows) or any other similar rendering engine in other operating systems (.XCompose).
 
-Hardware requirements: standard US keyboard (key combinations may work with other keyboards but labeling and the supplied layout charts may be confusing)
+**Hardware requirements:** standard US keyboard (key combinations may work with other keyboards but labeling and the supplied layout charts may be confusing)
 
-Software requirements: .XCompose rendering engine like in X.Org-based Linux distributions: Ubuntu, Red Hat, Centos, Fedora, or Arch Linux. In Windows, WinCompose is recommended. Only AccentCompose .XCompose file should be loaded.
+**Software requirements:** .XCompose rendering engine like in X.Org-based Linux distributions: Ubuntu, Red Hat, Centos, Fedora, or Arch Linux. In Windows, WinCompose is recommended. In any case, only AccentCompose .XCompose file should be loaded to avoid key sequence conflict.
 
-# Downloading WinCompose
-
-No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard
-.XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
+# Downloading WinCompose for Windows use
+No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
 
 # Design philosophy
 Most accents can be input from the unshifted level (exceptions are macrons and strokes that use _ and + respectively). When choosing which keys to type accents with, the leading idea has been ease of typing and mnemonics (e.g. / for acute, \ for grave, [ for circumflex, v for caron/háček, u for breve, _ for macron, - for tilde, comma for cedilla/comma accent, c for ogonek, + for stroke/slash, point for dot above, o for ring above, ] for diaeresis/umlaut/trema and = for hungarumlaut/double acute). Triggering characters that follow the Compose key are used for groups of letters (e.g. 1 for standalone accents, 2 for Cyrillic, 4 for currencies, 7 for IPA phonetics and 8 for Greek). 
