@@ -27,7 +27,7 @@ As the Compose approach is entirely sequential (Compose key followed by 2 or 3 k
 In this GitHub version, only circumflex (ˆ) and umlaut (¨) accents, which are entered by pressing [ and ] respectively, would need non-standard keyboard markings. In non-US localized USKBD.EU language versions, the national additions (e.g. ü, ä, ö for German, à, é, è for French, etc.) could benefit from keyboard sticker markings. As only 5 keycaps need relabeling, they could also easily be remembered after an initial reference to the layout diagrams.
 
 # Localized versions
-Localized AccentCompose versions are ideal for users that 
+Localized AccentCompose versions are ideal for users that
 
 1) want to use a US keyboard with small national additions for convenience, like ü/ä/ö or å/ä/ö or à/é/è)
 
@@ -35,13 +35,12 @@ Localized AccentCompose versions are ideal for users that
 
 6) like the idea of inputting accented and special characters with a Compose key with easy-to-type and easy-to-remember sequences
 
-While they share the same .XCompose file and the same Compose sequences, localized versions have separate keyboard DLLs for different European languages. They are all US QWERTY layout-based independent of the language supported. They come with printable localized layout charts and with a 2-page AccentCompose Cheat Sheet. 
+While they share the same .XCompose file and the same Compose sequences, localized versions have separate keyboard DLLs for different European languages. They are all US QWERTY layout-based independent of the language supported. They come with printable localized layout charts and with a 2-page AccentCompose Cheat Sheet.
 
 Download AccentCompose localized versions setup program from https://www.uskbd.eu/download.html
 
 # Choosing a physical Compose key
-These are the keys that should work in any case: LeftWin, RightWin, Menu, and RightCtrl. LeftWin is recommended for typing accented letters. It is not advisable to use LeftAlt or LeftCtrl or CapsLock as the Compose key. As WinCompose allows you to define two Compose keys, it is good practise to do so. 
-To select the Compose keys in WinCompose, open Options, Composing, Behavior, Compose Key...
+These are the keys that should work in any case: LeftWin, RightWin, Menu, and RightCtrl. LeftWin is recommended for typing accented letters. It is not advisable to use LeftAlt or LeftCtrl or CapsLock as the Compose key. As WinCompose allows you to define two Compose keys, it is good practise to do so. To select the Compose keys in WinCompose, open Options, Composing, Behavior, Compose Key...
 
 # Editing .Xcompose
 The supplied .XCompose has probably all you ever need but it can be freely edited if you choose to do so. You can add new key sequences for unsupported special characters. Check that your new key sequences do not conflict with key sequences already in use. Read the editing tips in the .XCompose file.
