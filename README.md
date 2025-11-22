@@ -1,7 +1,7 @@
 # AccentCompose
 Copyright © 2025 Kari Eveli and Lexitec. AccentCompose is a free software product download for non-commercial personal use. For full license details, see the attached license file.
 
-AccentCompose is available in two versions: This GitHub version uses a plain US keyboard and consists of an .XCompose file and layout documentation. The version available from https://www.uskbd.eu/ supports custom localized layouts created on top of the US keyboard hardware. This is accomplished using custom Windows keyboard DLLs which contain the most important localized keys for each supported language (most European languages are supported). There is a setup program and national layouts that can be easily switched on the fly. All layouts share the same .XCompose file. The main differences are as follows: the GitHub version can be used regardless of OS just by installing the .XCompose file, the USKBD.EU version is Windows only and requires the use of custom keyboard DLLs and of WinCompose or similar software to run. Both versions support the entry of all the accented letters and other symbols included in the AccentCompose .XCompose file. In the USKBD.EU version of the US or other localized keyboards, brackets ([ and ]) are replaced by two additional unshifted accent keys (^ and ") whereas in the GitHub version these accents are entered as [ and ] followed by the vowel in question. 
+AccentCompose is available in two versions: This GitHub version uses a plain US keyboard and consists of an .XCompose file and layout documentation. The version available from https://www.uskbd.eu/ supports custom localized layouts created on top of the US keyboard hardware. This is accomplished using custom Windows keyboard DLLs which contain the most important localized keys for each supported language (most European languages are supported). There is a setup program and national layouts that can be easily switched on the fly. All layouts and versions share the same .XCompose file. The main differences are as follows: the GitHub version can be used regardless of OS just by installing the .XCompose file, the USKBD.EU version is Windows only and requires the use of custom keyboard DLLs and of WinCompose or similar software to run. Both versions support the entry of all the accented letters and other symbols included in the AccentCompose .XCompose file. 
 
 The main purpose of the AccentCompose system is to enable easy typing of all accented letters present in European languages. Additionally, the .XCompose file supports many symbols, enclosed alphanumerics, Greek and Cyrillic letters as well as IPA phonetics. 
 
@@ -9,22 +9,23 @@ AccentCompose GitHub plain US version consists of
 1. US, Cyrillic and Greek keyboard layouts as well as a CheatSheet for all the key sequences (PDF diagrams that can be printed and laminated)
 2. a ready-to-use key sequence file for WinCompose (Windows) or any other similar rendering engine in other operating systems (.XCompose).
 
-Hardware requirements: standard US keyboard (key combinations may work with other keyboards but labeling may be confusing)
+Hardware requirements: standard US keyboard (key combinations may work with other keyboards but labeling and the supplied layout charts may be confusing)
 
-Software requirements: Windows operating system, .XCompose engine for Windows (e.g. WinCompose) with only AccentCompose .XCompose file loaded. Alternatively, any other OS which can handle standard .XCompose files
+Software requirements: .XCompose rendering engine in any OS (in Windows, WinCompose is recommended) with only AccentCompose .XCompose file loaded.
 
 # Downloading WinCompose
 No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard
 .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
 
 # Design philosophy
-Most accents can be input from the unshifted level (exceptions are macrons and strokes that use _ and + respectively). When choosing which keys to type accents with, the leading idea has been ease of typing and mnemonics (e.g. / for acute, \ for grave, 6 (or ^)* for circumflex, v for caron/háček, u for breve, _ for macron, - for tilde, comma for cedilla/comma accent, c for ogonek, + for stroke/slash, point for dot above, o for ring above, 3 (or ")* for  diaeresis/umlaut/trema and = for hungarumlaut/double acute). Triggering characters that follow the Compose key are used for groups of letters (e.g. 1 for standalone accents, 2 for Cyrillic, 4 for currencies, 7 for IPA phonetics and 8 for Greek). 
+Most accents can be input from the unshifted level (exceptions are macrons and strokes that use _ and + respectively). When choosing which keys to type accents with, the leading idea has been ease of typing and mnemonics (e.g. / for acute, \ for grave, [ for circumflex, v for caron/háček, u for breve, _ for macron, - for tilde, comma for cedilla/comma accent, c for ogonek, + for stroke/slash, point for dot above, o for ring above, ] for diaeresis/umlaut/trema and = for hungarumlaut/double acute). Triggering characters that follow the Compose key are used for groups of letters (e.g. 1 for standalone accents, 2 for Cyrillic, 4 for currencies, 7 for IPA phonetics and 8 for Greek). 
 
 In the USKBD.EU version, the keys `/~, ;/: and '/" are reserved for localized additions (e.g. German ü/ä/ö). They appear “as is” in the GitHub US and US localized versions. Note that these characters are not used for typing accents in any AccentCompose version (as is the case in standard Linux .XCompose implementations).
 
 As the Compose approach is entirely sequential (Compose key followed by 2 or 3 keypresses), there is no need for acrobatic keypresses that the dead key approach sometimes requires (e.g. AltGr+Shift+letter). The Compose method is chosen as a technically superior input method.
 
-*) In the USKBD.EU version.
+# Keyboard stickers
+In this GitHub version, only circumflex (ˆ) and umlaut (¨) accents, which are entered by pressing [ and ] respectively, would need non-standard keyboard markings. In non-US localized USKBD.EU language versions, the national additions (e.g. ü, ä, ö for German, à, é, è for French, etc.) could benefit from keyboard sticker markings. As only 5 keycaps need relabeling, they could also easily be remembered after an initial reference to the layout diagrams.
 
 # Localized versions
 Localized AccentCompose versions are ideal for users that 
