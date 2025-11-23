@@ -4,6 +4,7 @@
 # Copyright © 2025 Kari Eveli and Lexitec.
 # Version 3.0 (2025-11-22) for a plain US keyboard and/or Windows AccentCompose localized keyboard DLLs.
 # These sequences can be used with a standard US keyboard in any OS that supports .XCompose files
+# (Windows, Linux, etc., download files and documentation from https://github.com/lexitec/AccentCompose)
 # or with the Windows AccentCompose system, i.e. a unified US keyboard hardware-based European multi-layout, 
 # keyboard driver and Compose key system (download free setup program from https://www.uskbd.eu/).
 # All AccentCompose national layouts (and their DLLS) are supported by this unique .XCompose file.
@@ -109,19 +110,21 @@
 # = hungarumlaut, double acute
 #
 
-# N.B. While ^ and " work in the GitHub plain US version and are mnemonic, [ and ] are preferred as they are easier to type, and
-# ^ and " are in awkward positions on the shift plane and " does not work in the localized versions 
+# N.B. While ^ and " work in the GitHub plain US version and are mnemonic (keyboard as is, no stickers needed!), 
+# [ and ] are preferred as they are easier to type (unshift plane). Note that " does not work in the localized versions. 
 #
 # S cedilla (Turkish Ş) is default; to get S comma (Romanian Ș) - copy and paste.
 # T comma accent (Romanian Ț) is default; to get T cedilla (Gagauz or Dobrujan Tatar Ţ) - copy and paste.
 # Dutch Ĳ acute is rendered as two letters "ÍJ́"; <Multi_key> </> <Ĳ> works only with the Dutch layout, otherwise use acute I and J separately
 #
-# Support is limited to major European national languages (e.g. no support for Sami or Vietnamese languages).
-# Horn and dot below as well as deprecated Afrikaans 'n accents are excluded from this list.
-#
-# These accents are not implemented:
-# horn (best as separate characters in Vietnamese)
+# Supported languages: Czech, Danish, Dutch, Estonian, Finnish, French, Gaelic, German, Hungarian, Italian, Latvian, Lithuanian, 
+# Maltese, Norwegian, Polish, Portuguese, Romanian, Serbo-croatian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+# 
+# No support for Sami or Vietnamese languages.
+# Also these accents are not implemented:
+# horn
 # dot below
+# deprecated Afrikaans 'n accents
 #
 # Important note for MS Word users of the localized versions of AccentCompose: Word has conflicting default key sequences that should
 # be deleted if and when they interfere with AccentCompose. Read the 'Note on Word key sequences' for detailed instructions that can be found 
