@@ -16,7 +16,7 @@ AccentCompose GitHub plain US version consists of
 # Downloading WinCompose for Windows use
 No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
 
-#Setting up WinCompose for AccentCompose
+# Setting up WinCompose for AccentCompose
 Install WinCompose normally. You can use the portable zip or the setup exe version. Start WinCompose. Make a backup of the WinCompose .XCompose file in case you have customized it. Replace the WinCompose .XCompose file with the AccentCompose .XCompose file (go to WinCompose context menu from the notification area, Show sequences, Edit button, paste the contents of AccentCompose .XCompose file replacing the previous contents of the file, save the file, press Reload). From the taskbar icon, go to Options, General, Change Autodetect to English. Otherwise the Show sequences, Unicode characters items may not show the comment text which follows key sequence definitions in the .XCompose file. You can choose your Compose key here. 
 
 # Choosing a physical Compose key
