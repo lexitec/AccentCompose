@@ -16,8 +16,17 @@ AccentCompose GitHub plain US version consists of
 # Downloading WinCompose for Windows use
 No Windows Compose key engine is provided with AccentCompose. Instead, you will need to install a Unicode-capable Windows Compose Key system and load AccentCompose .XCompose file into it. To date, WinCompose is your best bet. WinCompose is a separate free product that supports standard .XCompose files. We only supply a standard .XCompose file for use with WinCompose or any other similar product. See: http://wincompose.info/ and/or https://github.com/samhocevar/wincompose
 
+#Setting up WinCompose for AccentCompose
+Install WinCompose normally. You can use the portable zip or the setup exe version. Start WinCompose. Make a backup of the WinCompose .XCompose file in case you have customized it. Replace the WinCompose .XCompose file with the AccentCompose .XCompose file (go to WinCompose context menu from the notification area, Show sequences, Edit button, paste the contents of AccentCompose .XCompose file replacing the previous contents of the file, save the file, press Reload). From the taskbar icon, go to Options, General, Change Autodetect to English. Otherwise the Show sequences, Unicode characters items may not show the comment text which follows key sequence definitions in the .XCompose file. You can choose your Compose key here. 
+
+# Choosing a physical Compose key
+For example in WinCompose, go to the Composing tab. These are the keys that should work in any case: LeftWin, RightWin, Menu, and RightCtrl. LeftWin is recommended for typing accented letters. It is not advisable to use LeftAlt or LeftCtrl or CapsLock as the Compose key. As WinCompose allows you to define two Compose keys, it is good practise to do so. To select the Compose keys in WinCompose, open Options, Composing, Behavior, Compose Key...
+
+# Editing .Xcompose
+The supplied .XCompose has probably all you ever need but it can be freely edited if you choose to do so. You can add new key sequences for unsupported special characters. Check that your new key sequences do not conflict with key sequences already in use. Read the editing tips in the .XCompose file.
+
 # Design philosophy
-Most accents can be input from the unshifted level (exceptions are macrons and strokes that use _ and + respectively). When choosing which keys to type accents with, the leading idea has been ease of typing and mnemonics (e.g. / for acute, \ for grave, [ for circumflex, v for caron/háček, u for breve, _ for macron, - for tilde, comma for cedilla/comma accent, c for ogonek, + for stroke/slash, point for dot above, o for ring above, ] for diaeresis/umlaut/trema and = for hungarumlaut/double acute). In this GitHub version, mnemonic characters ^ and " on the shift plane can also be used for circumflexes and umlauts respectively. Triggering characters that follow the Compose key are used for groups of letters (e.g. 1 for standalone accents, 2 for Cyrillic, 4 for currencies, 7 for IPA phonetics and 8 for Greek). 
+Most accents can be input from the unshifted level (exceptions are macrons and strokes that use _ and + respectively). When choosing which keys to type accents with, the leading idea has been ease of typing and mnemonics (e.g. / for acute, \ for grave, [ for circumflex, v for caron/há?ek, u for breve, _ for macron, - for tilde, comma for cedilla/comma accent, c for ogonek, + for stroke/slash, point for dot above, o for ring above, ] for diaeresis/umlaut/trema and = for hungarumlaut/double acute). In this GitHub version, mnemonic characters ^ and " on the shift plane can also be used for circumflexes and umlauts respectively. Triggering characters that follow the Compose key are used for groups of letters (e.g. 1 for standalone accents, 2 for Cyrillic, 4 for currencies, 7 for IPA phonetics and 8 for Greek). 
 
 In the USKBD.EU version, the keys `/~, ;/: and '/" are reserved for localized additions (e.g. German ü/ä/ö). They appear “as is” in the GitHub US and US localized versions. Note that these characters are not used for typing accents in any AccentCompose version (as is the case in standard Linux .XCompose implementations).
 
@@ -39,8 +48,3 @@ While they share the same .XCompose file and the same Compose sequences, localiz
 
 Download AccentCompose localized versions setup program from https://www.uskbd.eu/download.html
 
-# Choosing a physical Compose key
-These are the keys that should work in any case: LeftWin, RightWin, Menu, and RightCtrl. LeftWin is recommended for typing accented letters. It is not advisable to use LeftAlt or LeftCtrl or CapsLock as the Compose key. As WinCompose allows you to define two Compose keys, it is good practise to do so. To select the Compose keys in WinCompose, open Options, Composing, Behavior, Compose Key...
-
-# Editing .Xcompose
-The supplied .XCompose has probably all you ever need but it can be freely edited if you choose to do so. You can add new key sequences for unsupported special characters. Check that your new key sequences do not conflict with key sequences already in use. Read the editing tips in the .XCompose file.
